@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3842468284386054719}
   - component: {fileID: 6528987556309064930}
+  - component: {fileID: 1962948068259650230}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -45,3 +46,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InputActionAsset: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+--- !u!114 &1962948068259650230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245867862426543776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ae72bd31b590d4cb01f85bce374566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Player: {fileID: 8469145523248140257, guid: f19461ff5dc063148a210d01a21e35d2, type: 3}
+  m_Planets: []
