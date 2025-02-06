@@ -685,6 +685,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "HMD",
+            "id": "d4fe2001-d2fe-4252-b48f-c23542973fbd",
+            "actions": [
+                {
+                    "name": "LookRotation",
+                    "type": "Value",
+                    "id": "fa7b8a55-a7d5-46ff-ac9d-3c2720d714cf",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9fb4cd35-c26f-47d1-b2bf-323233b6d47d",
+                    "path": "<XRHMD>/centerEyeRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR",
+                    "action": "LookRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

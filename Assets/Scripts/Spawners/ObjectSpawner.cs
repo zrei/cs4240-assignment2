@@ -1,15 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public abstract class ObjectSpawner<T> : MonoBehaviour where T : MonoBehaviour
+public class ObjectSpawner : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private ObjectPool m_Pool;
 
-    [Header("Fruit Spawn")]
+    [Header("Spawn")]
     [SerializeField] private int m_AmountToSpawn;
     [Tooltip("Radius around the spawner to spawn objects")]
     [SerializeField] private float m_RadiusAroundSpawnerToSpawn;
+    [SerializeField] private bool m_RestrictRadiusAroundObject;
     [Tooltip("Radius around each existing object that should not contain other objects")]
     [SerializeField] private float m_RestrictedRadiusAroundObject;
 
@@ -26,21 +28,26 @@ public abstract class ObjectSpawner<T> : MonoBehaviour where T : MonoBehaviour
     private void SpawnObject()
     {
         Vector3 spawnPos = GetRandomPosition();
-        while (HasOverlappingObjects(spawnPos))
+        if (m_RestrictRadiusAroundObject)
         {
-            spawnPos = GetRandomPosition();
+            while (HasOverlappingObjects(spawnPos))
+            {
+                spawnPos = GetRandomPosition();
+            }
         }
-        T gameObject = m_Pool.GetObject<T>(true);
-        gameObject.transform.position = spawnPos;
-        m_TrackedTransforms.Add(gameObject.transform);
+
+        SpawnedObject spawnedObject = m_Pool.GetObject<SpawnedObject>(true);
+        spawnedObject.OnDestroyEvent += OnObjectDespawn;
+        spawnedObject.transform.position = spawnPos;
+        m_TrackedTransforms.Add(spawnedObject.transform);
     }
 
     #region Helper
     private Vector3 GetRandomPosition()
     {
-        float x = (Random.value * 2 - 1) * m_RadiusAroundSpawnerToSpawn;
+        float x = (UnityEngine.Random.value * 2 - 1) * m_RadiusAroundSpawnerToSpawn;
         float y = 0;
-        float z = (Random.value * 2 - 1) * m_RadiusAroundSpawnerToSpawn;
+        float z = (UnityEngine.Random.value * 2 - 1) * m_RadiusAroundSpawnerToSpawn;
         return transform.position + new Vector3(x, y, z);
     }
 
@@ -59,4 +66,21 @@ public abstract class ObjectSpawner<T> : MonoBehaviour where T : MonoBehaviour
         return (pos - fruitTransform.position).magnitude <= m_RestrictedRadiusAroundObject;
     }
     #endregion
+
+    private void OnObjectDespawn(SpawnedObject spawnObject)
+    {
+        m_Pool.ReturnObjectToPool(spawnObject.gameObject);
+        m_TrackedTransforms.Remove(spawnObject.transform);
+        SpawnObject();
+    }
+}
+
+public abstract class SpawnedObject : MonoBehaviour, IHeightHandle
+{
+    public Action<SpawnedObject> OnDestroyEvent;
+
+    void IHeightHandle.OnHeightDestroy()
+    {
+        OnDestroyEvent?.Invoke(this);
+    }
 }

@@ -1,15 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Fracture : MonoBehaviour
 {
     [Tooltip("\"Fractured\" is the object that this will break into")]
-    public GameObject fractured;
-
+    [SerializeField] private GameObject m_FracturedObj;
     public void FractureObject()
     {
-        Instantiate(fractured, transform.position, transform.rotation); //Spawn in the broken version
-        Destroy(gameObject); //Destroy the object to stop it getting in the way
+        Instantiate(m_FracturedObj, transform.position, transform.rotation); //Spawn in the broken version
+        //Destroy(gameObject); //Destroy the object to stop it getting in the way
     }
 }
