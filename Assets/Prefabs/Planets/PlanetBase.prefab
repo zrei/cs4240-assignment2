@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2286476209392238813}
   - component: {fileID: 8500684799259653324}
   - component: {fileID: 6947211455029364394}
-  - component: {fileID: 4912075797609684412}
   m_Layer: 7
   m_Name: PlanetBase
   m_TagString: Untagged
@@ -70,23 +69,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerTeleportPoint: {fileID: 7994069831278856524}
---- !u!114 &4912075797609684412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 535916669910943860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f9fa916603a59b45aaa1319c5acc009, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Pool: {fileID: 5935887715041685720}
-  m_AmountToSpawn: 10
-  m_RadiusAroundSpawnerToSpawn: 30
-  m_RestrictRadiusAroundObject: 1
-  m_RestrictedRadiusAroundObject: 2
 --- !u!1 &6323743402676918742
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,6 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7994069831278856524}
+  - component: {fileID: 8772568914581868712}
   m_Layer: 7
   m_Name: Position
   m_TagString: Untagged
@@ -158,9 +141,28 @@ Transform:
   m_GameObject: {fileID: 8536942688762258612}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.46, z: 0}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2286476209392238813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8772568914581868712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8536942688762258612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9fa916603a59b45aaa1319c5acc009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Pool: {fileID: 5935887715041685720}
+  m_AmountToSpawn: 10
+  m_MinimumRadiusToSpawn: 0
+  m_MaximumRadiusToSpawn: 30
+  m_RestrictRadiusAroundObject: 1
+  m_RestrictedRadiusAroundObject: 2
+  m_ScaleValue: {x: 0.6, y: 0.6, z: 0.6}

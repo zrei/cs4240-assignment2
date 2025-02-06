@@ -13,9 +13,9 @@ public class MinimumHeight : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (transform.position.z < m_MinimumWorldHeight)
+        if (transform.position.y < m_MinimumWorldHeight)
         {
             m_Handle.OnHeightDestroy();
         }

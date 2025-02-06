@@ -5,8 +5,9 @@ public class ShootHand : BaseHand
 {
     private HandPositioning m_HandPositioning;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         m_HandPositioning = GetComponent<HandPositioning>();
     }
 

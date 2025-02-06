@@ -27,7 +27,7 @@ public class Player : Singleton<Player>
         m_LookInput.action.performed -= OnLookUpdate;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         transform.rotation = m_LookRotation;
     }
