@@ -82,7 +82,7 @@ public class ObjectSpawner : MonoBehaviour
 [RequireComponent(typeof(Rigidbody))]
 public abstract class SpawnedObject : MonoBehaviour, IHeightHandle
 {
-    public Action<SpawnedObject> OnDestroyEvent;
+    public event Action<SpawnedObject> OnDestroyEvent;
 
     protected Rigidbody m_Rigidbody;
 

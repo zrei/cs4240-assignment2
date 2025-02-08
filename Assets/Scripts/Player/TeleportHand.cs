@@ -34,11 +34,10 @@ public class TeleportHand : BaseHand
         Planet planet = m_CurrHitData.transform.GetComponent<Planet>();
         if (Player.Instance.CurrPlanet == planet)
             return;
-        planet.PlacePlayer(Player.Instance.transform);
-        Player.Instance.SetPlanet(planet);
+
+        Player.Instance.PerformTeleportBlackout(null, () => TeleportPlayer(planet));
 
         m_CurrCooldown = m_TeleportCooldown;
-        m_AudioSource.PlayOneShot(m_TeleportClip);
         m_LineRenderer.enabled = false;
     }
 
@@ -57,5 +56,12 @@ public class TeleportHand : BaseHand
             m_LineRenderer.SetPosition(0, transform.position);
             m_LineRenderer.SetPosition(1, m_HasHit ? m_CurrHitData.point : transform.position + transform.forward * m_MaxDrawDistance);
         }
+    }
+
+    private void TeleportPlayer(Planet planet)
+    {
+        planet.PlacePlayer(Player.Instance.transform);
+        Player.Instance.SetPlanet(planet);
+        m_AudioSource.PlayOneShot(m_TeleportClip);
     }
 }
