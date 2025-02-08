@@ -5,6 +5,7 @@ public class HandPositioning : MonoBehaviour
 {
     [SerializeField] private InputActionReference m_PositionInputAction;
     [SerializeField] private InputActionReference m_RotationInputAction;
+    [SerializeField] private float m_PositionScale = 2f;
 
     private Vector3 m_LocalPosition;
     private Quaternion m_LocalRotation;
