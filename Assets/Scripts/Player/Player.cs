@@ -29,14 +29,16 @@ public class Player : Singleton<Player>
         CurrPlanet = planet;
     }
 
-    private void Start()
+    protected override void HandleAwake()
     {
+        base.HandleAwake();
         m_LookInput.action.performed += OnLookUpdate;
         ToggleBlackOut(false);
     }
 
-    private void OnDestroy()
+    protected override void HandleDestroy()
     {
+        base.HandleDestroy();
         m_LookInput.action.performed -= OnLookUpdate;
     }
 
