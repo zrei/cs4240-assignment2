@@ -1,14 +1,14 @@
 using UnityEngine;
 
-[RequireComponent(typeof(HandPositioning))]
+//[RequireComponent(typeof(HandPositioning))]
 public class ShootHand : BaseHand
 {
-    private HandPositioning m_HandPositioning;
+    //private HandPositioning m_HandPositioning;
 
     protected override void Start()
     {
         base.Start();
-        m_HandPositioning = GetComponent<HandPositioning>();
+        //m_HandPositioning = GetComponent<HandPositioning>();
     }
 
     protected override void HandleHandInput()

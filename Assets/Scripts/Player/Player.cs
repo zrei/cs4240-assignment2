@@ -44,7 +44,7 @@ public class Player : Singleton<Player>
 
     private void LateUpdate()
     {
-        m_PlayerCamera.transform.localRotation = m_LookRotation;
+        // m_PlayerCamera.transform.localRotation = m_LookRotation;
     }
 
     private void OnLookUpdate(InputAction.CallbackContext context)
