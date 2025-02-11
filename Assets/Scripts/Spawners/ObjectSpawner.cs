@@ -91,6 +91,11 @@ public abstract class SpawnedObject : MonoBehaviour, IHeightHandle
         OnDestroyEvent?.Invoke(this);
     }
 
+    protected void InvokeOnDestroyEvent()
+    {
+        OnDestroyEvent?.Invoke(this);
+    }
+    
     public virtual void Prepare() 
     { 
         if (m_Rigidbody == null)

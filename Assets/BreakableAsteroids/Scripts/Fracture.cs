@@ -6,7 +6,13 @@ public class Fracture : MonoBehaviour
     [SerializeField] private GameObject m_FracturedObj;
     public void FractureObject()
     {
-        Instantiate(m_FracturedObj, transform.position, transform.rotation); //Spawn in the broken version
-        //Destroy(gameObject); //Destroy the object to stop it getting in the way
+        Instantiate(m_FracturedObj, transform.position, transform.rotation); 
+        ParticleSystem particleEffect = GetComponentInChildren<ParticleSystem>();
+        if (particleEffect != null)
+        {
+            particleEffect.Play();
+        }
+        Destroy(gameObject);  
+           
     }
 }

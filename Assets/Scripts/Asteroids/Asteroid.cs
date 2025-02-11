@@ -2,13 +2,12 @@ using UnityEngine;
 
 public class Asteroid : SpawnedObject
 {
-    // upon "despawning" the projectile, please call OnDestroyEvent?.Invoke(this) instead of calling Destroy(gameObject)
-
     [SerializeField] private GameObject[] m_Models;
     
 
     [SerializeField] private float m_MinMass;
     [SerializeField] private float m_MaxMass;
+    [SerializeField] private int health = 3;  
 
     private Fracture m_AsteroidFracture;
 
@@ -32,4 +31,28 @@ public class Asteroid : SpawnedObject
         base.Prepare();
         m_Rigidbody.mass = Random.value * (m_MaxMass - m_MinMass) + m_MinMass;
     }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        Debug.Log("Asteroid took damage. Remaining health: " + health);
+        if (health <= 0)
+        {
+            DestroyAsteroid(); 
+        }
+    }
+
+    public void DestroyAsteroid()
+    {
+        Debug.Log("DestroyAsteroid method called.");
+        
+        if (m_AsteroidFracture != null)
+        {
+            Debug.Log("Asteroid destroyed!");
+            m_AsteroidFracture.FractureObject();
+        }
+        InvokeOnDestroyEvent(); 
+    }
+
+
 }
