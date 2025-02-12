@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Projectile4
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3efdfb47275bdf54583ae191f1a4ef7a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3efdfb47275bdf54583ae191f1a4ef7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -56,8 +60,11 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: -3033667219593020291, guid: cbed50a0c2d66314fb0c829b768d3d75, type: 3}
-    m_RemovedComponents:
-    - {fileID: 6400000, guid: 3efdfb47275bdf54583ae191f1a4ef7a, type: 3}
+    - target: {fileID: 6400000, guid: 3efdfb47275bdf54583ae191f1a4ef7a, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

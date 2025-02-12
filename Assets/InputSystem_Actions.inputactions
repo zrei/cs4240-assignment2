@@ -847,6 +847,17 @@
                 },
                 {
                     "name": "",
+                    "id": "870410d4-f4ed-4606-b91d-2dbb526c1ba9",
+                    "path": "<XRSimulatedController>{RightHand}/gripButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TriggerPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "46ca4d5c-b997-46ba-a675-719324185dff",
                     "path": "<XRController>{RightHand}/trackingState",
                     "interactions": "",
