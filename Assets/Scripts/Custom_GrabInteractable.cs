@@ -104,7 +104,7 @@ public class Custom_GrabInteractable : MonoBehaviour
     private void ShowGrabLine()
     {
         RaycastHit hit;
-        float rayLength = 10f;
+        float rayLength = 20f;
 
         if (rayLine != null)
         {

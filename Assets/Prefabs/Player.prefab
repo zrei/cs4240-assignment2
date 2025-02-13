@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 4670000464642746917}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1285,7 +1285,7 @@ GameObject:
   - component: {fileID: 821240255224432346}
   m_Layer: 0
   m_Name: RightHand
-  m_TagString: Untagged
+  m_TagString: RightHand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1319,6 +1319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InputAction: {fileID: 3341818864657540296, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  bonusPickup: {fileID: 4466612696083197191, guid: 40b4e1c0d96c0844e87546adfa0832a1, type: 3}
 --- !u!114 &9116913922340263176
 MonoBehaviour:
   m_ObjectHideFlags: 0
