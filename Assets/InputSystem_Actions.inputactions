@@ -743,6 +743,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "GripPress",
+                    "type": "Button",
+                    "id": "0f375ae3-208f-412c-ae5d-93a0c5e99d51",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -847,23 +856,23 @@
                 },
                 {
                     "name": "",
-                    "id": "870410d4-f4ed-4606-b91d-2dbb526c1ba9",
-                    "path": "<XRSimulatedController>{RightHand}/gripButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TriggerPress",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "46ca4d5c-b997-46ba-a675-719324185dff",
                     "path": "<XRController>{RightHand}/trackingState",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "TrackingState",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0531844-eda7-4498-b8a2-29064bd12d21",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR",
+                    "action": "GripPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
