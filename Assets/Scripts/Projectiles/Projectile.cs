@@ -2,11 +2,9 @@ using UnityEngine;
 
 public class Projectile : SpawnedObject
 {
-    // upon "despawning" the projectile, please call OnDestroyEvent?.Invoke(this) instead of calling Destroy(gameObject)
-
     [SerializeField] private GameObject[] m_Models;
 
-    private void Start()
+    protected virtual void Start()
     {
         GameObject model = Instantiate(GetRandomModel());
         model.transform.parent = transform;

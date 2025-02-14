@@ -1,21 +1,10 @@
 using UnityEngine;
 
-public class PickUp : MonoBehaviour
+public class ProjectilePickUp : Projectile
 {
-    private Transform playerTransform;
-
-    void Start()
+    public void PickUp()
     {
-        playerTransform = GameObject.FindGameObjectWithTag("RightHand").transform;
-    }
-
-    void Update()
-    {
-        if (transform.parent == playerTransform)
-        {
-            ScoreManager.Instance.AddScore(5);
-            Destroy(gameObject) // Needs to be however it returns to pool
-            
-        }
+        ScoreManager.Instance.AddScore(5);
+        Despawn();
     }
 }

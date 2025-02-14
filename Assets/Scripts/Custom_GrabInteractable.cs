@@ -135,17 +135,24 @@ public class Custom_GrabInteractable : MonoBehaviour
             if (hit.collider.CompareTag("Grabbable"))
             {
                 Debug.Log("Grabbable object detected!");
+
                 grabbedObject = hit.collider.gameObject;
 
-
-
-                Rigidbody rb = grabbedObject.GetComponent<Rigidbody>();
-                if (rb != null)
+                if (hit.collider.gameObject.layer != LayerMask.NameToLayer("PickUp"))
                 {
-                    rb.isKinematic = true;
+                    grabbedObject.transform.SetParent(transform);
+                    Rigidbody rb = grabbedObject.GetComponent<Rigidbody>();
+                    if (rb != null)
+                    {
+                        rb.isKinematic = true;
+                    }
+                    isGrabbing = true;
                 }
-                isGrabbing = true;
-                grabbedObject.transform.SetParent(transform);
+                else
+                {
+                    grabbedObject.GetComponent<ProjectilePickUp>().PickUp();
+                    grabbedObject = null;
+                }
             }
             else
             {

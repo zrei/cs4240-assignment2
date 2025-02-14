@@ -14,7 +14,8 @@ public class BulletCollision : MonoBehaviour
                 Instantiate(explosionPrefab, transform.position, transform.rotation);
             }
 
-            gameObject.SetActive(false);
+            
+            collision.gameObject.GetComponentInParent<SpawnedObject>().Despawn();
             collision.gameObject.SetActive(false);
             ScoreManager.Instance.AddScore(1);
         }

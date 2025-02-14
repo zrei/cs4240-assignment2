@@ -32,7 +32,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7994069831278856524}
+  - {fileID: 8112457089383031148}
   - {fileID: 2516878504235963747}
+  - {fileID: 5471389187865777085}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &8500684799259653324
@@ -69,6 +71,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerTeleportPoint: {fileID: 7994069831278856524}
+--- !u!1 &4569967940388441927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5471389187865777085}
+  - component: {fileID: 3125776908745417557}
+  m_Layer: 7
+  m_Name: PickUpPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5471389187865777085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4569967940388441927}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.46, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2286476209392238813}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3125776908745417557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4569967940388441927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15a7580e2e737f49bda9fe9b6bc7563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ObjectToPool: {fileID: 7466718831750823569, guid: 1b94984d9cfbf4443b0666618a0496ac, type: 3}
+  m_InitialAmountToSpawn: 10
 --- !u!1 &6323743402676918742
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,7 +128,7 @@ GameObject:
   - component: {fileID: 2516878504235963747}
   - component: {fileID: 5935887715041685720}
   m_Layer: 7
-  m_Name: BulletPool
+  m_Name: NormalFallingPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,6 +163,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ObjectToPool: {fileID: 2706594561896517195, guid: 2e89c6583307f2241a5ef5a0b9e23aee, type: 3}
   m_InitialAmountToSpawn: 10
+--- !u!1 &8214985998400483509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8112457089383031148}
+  - component: {fileID: 2002189474479694728}
+  - component: {fileID: 1864644142529286961}
+  m_Layer: 7
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8112457089383031148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8214985998400483509}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.96, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2286476209392238813}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2002189474479694728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8214985998400483509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9fa916603a59b45aaa1319c5acc009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Pool: {fileID: 5935887715041685720}
+  m_AmountToSpawn: 10
+  m_MinimumRadiusToSpawn: 5
+  m_MaximumRadiusToSpawn: 30
+  m_RestrictRadiusAroundObject: 1
+  m_RestrictedRadiusAroundObject: 2
+  m_ScaleValue: {x: 0.6, y: 0.6, z: 0.6}
+--- !u!114 &1864644142529286961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8214985998400483509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9fa916603a59b45aaa1319c5acc009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Pool: {fileID: 3125776908745417557}
+  m_AmountToSpawn: 2
+  m_MinimumRadiusToSpawn: 5
+  m_MaximumRadiusToSpawn: 30
+  m_RestrictRadiusAroundObject: 1
+  m_RestrictedRadiusAroundObject: 2
+  m_ScaleValue: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!1 &8536942688762258612
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +243,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7994069831278856524}
-  - component: {fileID: 8772568914581868712}
   m_Layer: 7
   m_Name: Position
   m_TagString: Untagged
@@ -141,28 +259,9 @@ Transform:
   m_GameObject: {fileID: 8536942688762258612}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2286476209392238813}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8772568914581868712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8536942688762258612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f9fa916603a59b45aaa1319c5acc009, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Pool: {fileID: 5935887715041685720}
-  m_AmountToSpawn: 10
-  m_MinimumRadiusToSpawn: 0
-  m_MaximumRadiusToSpawn: 30
-  m_RestrictRadiusAroundObject: 1
-  m_RestrictedRadiusAroundObject: 2
-  m_ScaleValue: {x: 0.6, y: 0.6, z: 0.6}

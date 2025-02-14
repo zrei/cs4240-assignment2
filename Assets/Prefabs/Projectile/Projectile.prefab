@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4470463981117523331}
   - component: {fileID: 2018138516542718275}
   - component: {fileID: 2888572181665867348}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Projectile
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -48,7 +48,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Models:
-  - {fileID: 4466612696083197191, guid: 40b4e1c0d96c0844e87546adfa0832a1, type: 3}
   - {fileID: 5934513333761757455, guid: a9bfa920c5e80364881c7ffc16df98cd, type: 3}
   - {fileID: 5596804157296375329, guid: e21b4b63a7672dd4f895ed10838b6301, type: 3}
   - {fileID: 5925525514563118104, guid: 3705b5945163fd245982134a18bd8c90, type: 3}
@@ -56,7 +55,6 @@ MonoBehaviour:
   - {fileID: 1821373796154770899, guid: 98a2192089b069d4ba9d750338136c8c, type: 3}
   - {fileID: 4466612696083197191, guid: b5ac5cce98a370d4b93e2f1e6681a9e3, type: 3}
   - {fileID: 7255609267524982736, guid: 1a4b04c372094304eadcd44ecadd3306, type: 3}
-  - {fileID: 4466612696083197191, guid: 40b4e1c0d96c0844e87546adfa0832a1, type: 3}
 --- !u!114 &4470463981117523331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +87,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 4.2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2888572181665867348
 Rigidbody:

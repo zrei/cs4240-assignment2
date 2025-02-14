@@ -265,6 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 695215846}
   - component: {fileID: 695215847}
+  - component: {fileID: 695215848}
   m_Layer: 0
   m_Name: AsteroidSpawner
   m_TagString: Untagged
@@ -286,6 +287,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1385124476}
+  - {fileID: 1598751346}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &695215847
@@ -302,6 +304,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Pool: {fileID: 1385124475}
   m_AmountToSpawn: 10
+  m_MinimumRadiusToSpawn: 30
+  m_MaximumRadiusToSpawn: 110
+  m_RestrictRadiusAroundObject: 1
+  m_RestrictedRadiusAroundObject: 10
+  m_ScaleValue: {x: 4, y: 4, z: 4}
+--- !u!114 &695215848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695215845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9fa916603a59b45aaa1319c5acc009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Pool: {fileID: 1598751347}
+  m_AmountToSpawn: 1
   m_MinimumRadiusToSpawn: 30
   m_MaximumRadiusToSpawn: 110
   m_RestrictRadiusAroundObject: 1
@@ -543,6 +564,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4417863647507664852, guid: 5ad8704b90a10704b942fdc16a0cc02b, type: 3}
   m_PrefabInstance: {fileID: 8166291192186372921}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1598751345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598751346}
+  - component: {fileID: 1598751347}
+  m_Layer: 0
+  m_Name: PickUpPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1598751346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598751345}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 695215846}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598751347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598751345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15a7580e2e737f49bda9fe9b6bc7563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ObjectToPool: {fileID: 7466718831750823569, guid: 1b94984d9cfbf4443b0666618a0496ac, type: 3}
+  m_InitialAmountToSpawn: 2
 --- !u!4 &1659441794 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 29049711597467458, guid: 50a4430f87b42a54aa0e002505921d4d, type: 3}

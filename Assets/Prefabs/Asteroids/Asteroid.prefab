@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7434540098595922897}
   m_Layer: 0
   m_Name: Asteroid
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,7 +62,6 @@ MonoBehaviour:
   - {fileID: 3606340279829517473, guid: 46e7653dfbf77b247bc855c46bbd4f4e, type: 3}
   - {fileID: 7642089964585371861, guid: ec4c29675987e87429aeec5e4e93fc5f, type: 3}
   - {fileID: 2194794745080136896, guid: c0e82ab38938b0a4ab35f65d8981ac0f, type: 3}
-  - {fileID: 4466612696083197191, guid: 40b4e1c0d96c0844e87546adfa0832a1, type: 3}
   m_MinMass: 0.2
   m_MaxMass: 1.5
 --- !u!114 &4267253065547148959

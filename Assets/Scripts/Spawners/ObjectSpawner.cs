@@ -98,4 +98,10 @@ public abstract class SpawnedObject : MonoBehaviour, IHeightHandle
         m_Rigidbody.linearVelocity = Vector3.zero;
         m_Rigidbody.angularVelocity = Vector3.zero;
     }
+
+    public void Despawn()
+    { 
+        OnDestroyEvent?.Invoke(this);
+    }
+
 }

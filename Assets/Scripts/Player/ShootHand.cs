@@ -12,8 +12,6 @@ public class ShootHand : BaseHand
         //m_HandPositioning = GetComponent<HandPositioning>();
     }
 
-
-
     protected override void HandleHandInput()
     {
 
