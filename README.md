@@ -1,4 +1,6 @@
 # How to Play the Game
+The game is found in the scene `MainScene`.
+
 Teleporting is done with the left controller. The rendered line indicates where the teleport is aimed - the player can only teleport to large planets they are not currently on. There is a cooldown for teleporting. Activate the teleport with the left controller trigger press input.
 
 Grabbing is done with the right controller. You can pick up the gun (which should spawn in the character's vicinity) and the green falling objects (which can be picked up for points) if they are close enough to the right controller. Activate the grab with the right controller grip press input - a grabbed object will remain grabbed while the grip press input is held down.
